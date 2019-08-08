@@ -6,6 +6,9 @@ function matrixGenerator(rows, columns) {
     let row = [];
     for (let j = 0; j < columns; j++) {
       row.push(Math.floor(Math.random() * 100 + 1));
+      row.sort(function(a, b) {
+        return a - b;
+      });
     }
     matrix.push(row);
   }
